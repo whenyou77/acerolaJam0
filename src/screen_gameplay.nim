@@ -55,13 +55,6 @@ proc updateGameplayScreen* =
   # Gameplay Screen Update logic
   # TODO: Update GAMEPLAY screen variables here!
   # Press enter or tap to change to ENDING screen
-  if isKeyPressed(Enter) or isGestureDetected(Tap):
-    finishScreen = 1
-    playSound(fxCoin)
-
-proc drawGameplayScreen* =
-  # Gameplay Screen Draw logic
-  # TODO: Draw GAMEPLAY screen here!
   if isKeyDown(D): vel.x = 2.0
   elif isKeyDown(A): vel.x = -2.0
   else: vel.x = 0.0
@@ -69,6 +62,13 @@ proc drawGameplayScreen* =
   if isKeyPressed(W): vel.y = -8.0
   pos += vel
   camera.offset.x = -pos.x+getScreenWidth()/sizeRatio
+  if isKeyPressed(Enter) or isGestureDetected(Tap):
+    finishScreen = 1
+    playSound(fxCoin)
+
+proc drawGameplayScreen* =
+  # Gameplay Screen Draw logic
+  # TODO: Draw GAMEPLAY screen here!
   beginTextureMode(filter)
   drawRectangle(0,0,getScreenWidth(),getScreenHeight(),SkyBlue)
   #beginMode2D(camera)
