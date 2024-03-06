@@ -42,3 +42,5 @@ var
   font*: Font
   music*: Music
   fxCoin*: Sound
+  texPlayer*: Texture2D
+  filter*: RenderTexture2D

@@ -193,6 +193,8 @@ proc main =
     font = loadFont("resources/mecha.png")
     music = loadMusicStream("resources/ambient.ogg")
     fxCoin = loadSound("resources/coin.wav")
+    texPlayer = loadTexture("resources/gatito_idle.png")
+    filter = loadRenderTexture(getScreenWidth() div sizeRatio.int32,getScreenHeight() div sizeRatio.int32)
     setMusicVolume(music, 1)
     playMusicStream(music)
     # Setup and init first screen

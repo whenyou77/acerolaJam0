@@ -1,6 +1,6 @@
 # Package
 version       = "1.0.0"
-author        = "Author"
+author        = "whenyou77"
 description   = "Raylib game template"
 license       = "License"
 srcDir        = "src"
